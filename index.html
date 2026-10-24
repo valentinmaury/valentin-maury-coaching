@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Valentin Maury | Athlète ultra-trail et coach</title>
+<meta name="description" content="Valentin Maury, athlète ultra-trail à Annecy, qualifié aux finales UTMB 2027, et coach course à pied, trail et préparation physique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap">
+<style>
+:root{
+  --bg:#F3F5F4; --fg:#1B2630; --muted:#55636E; --surface:#E3E7E5; --line:rgba(27,38,48,.18);
+  --ink:#16202A; --on-ink:#F3F5F4; --band:#16202A;
+  --orange:#D94A0A; --blue:#1F5FA8; --on-accent:#FFFFFF;
+  --accent:var(--orange);
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --cut:clamp(22px,3.4vw,56px);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10181F; --fg:#E8ECEE; --muted:#9AA8B2; --surface:#19232C; --band:#1B2833; --line:rgba(255,255,255,.16);
+    --orange:#FF7A3D; --blue:#6FB1F2; --on-accent:#10181F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10181F; --fg:#E8ECEE; --muted:#9AA8B2; --surface:#19232C; --band:#1B2833; --line:rgba(255,255,255,.16);
+  --orange:#FF7A3D; --blue:#6FB1F2; --on-accent:#10181F;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--display);font-size:1.0625rem;line-height:1.6;font-variation-settings:"wdth" 100;transition:background .3s}
+body[data-view="athlete"]{--accent:var(--orange)}
+body[data-view="coach"]{--accent:var(--blue)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.cond{font-variation-settings:"wdth" 62;font-weight:800;letter-spacing:.005em;line-height:.95}
+h1,h2,h3,h4{margin:0;font-variation-settings:"wdth" 62;font-weight:800;line-height:.98;letter-spacing:.005em}
+h2{font-size:clamp(2.6rem,6.5vw,5rem);margin-bottom:1.5rem}
+h3{font-size:clamp(1.7rem,3vw,2.3rem)}
+p{margin:0 0 1rem;max-width:62ch}
+.lede{font-size:1.25rem;line-height:1.5;max-width:56ch}
+.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3.5rem,8vw,7rem) 0}
+.alt{--cut:clamp(22px,3.4vw,56px);--bg:#223140;--fg:#F3F5F4;--muted:#B4C0C8;--line:rgba(255,255,255,.22);
+  background:var(--band);color:var(--fg);
+  clip-path:polygon(0 var(--cut),100% 0,100% calc(100% - var(--cut)),0 100%);
+  margin:calc(-1*var(--cut)) 0;padding-block:calc(clamp(3.5rem,8vw,7rem) + var(--cut))}
+body[data-view="athlete"] .alt{--accent:#FF7A3D;--on-accent:#16202A}
+body[data-view="coach"] .alt{--accent:#6FB1F2;--on-accent:#10181F}
+.ridge{display:block;width:100%;height:clamp(80px,12vw,190px);color:var(--band);margin-top:clamp(3rem,6vw,5rem);margin-bottom:-1px}
+.intro{background:linear-gradient(104deg,transparent 56%,color-mix(in srgb,var(--accent) 20%,transparent) 56%)}
+.intro.hero-wide{position:relative;overflow:hidden;display:flex;align-items:center;min-height:clamp(560px,84vh,800px);padding:clamp(5rem,12vh,8rem) 0 clamp(3rem,8vh,5rem);background:#16202A;color:#fff}
+.intro.hero-wide .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 62%}
+.intro.hero-wide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,22,29,.9) 0%,rgba(14,22,29,.6) 42%,rgba(14,22,29,.06) 78%),linear-gradient(0deg,rgba(14,22,29,.5),transparent 38%)}
+.intro.hero-wide .wrap{display:block;position:relative;z-index:1}
+.intro.hero-wide .hero-copy>*{max-width:640px}
+.intro.hero-wide h1{color:#fff}
+.intro.hero-wide .lede{color:#E6ECF0}
+.intro.hero-wide .btn.ghost{color:#fff}
+@media (max-width:860px){
+  .intro.hero-wide{align-items:flex-end;min-height:620px}
+  .intro.hero-wide::after{background:linear-gradient(0deg,rgba(14,22,29,.92) 0%,rgba(14,22,29,.62) 55%,rgba(14,22,29,.12) 100%)}
+}
+.muted{color:var(--muted)}
+[hidden]{display:none!important}
+
+/* header */
+.top{backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem max(1.25rem,calc((100% - 1200px)/2));background:color-mix(in srgb,var(--bg) 84%,transparent);border-bottom:1px solid var(--line)}
+.switch{display:flex;border:1.5px solid currentColor;border-radius:2px;padding:3px}
+.switch a{padding:.35rem 1.1rem;border-radius:1px;text-decoration:none;font-weight:600;font-size:.95rem;line-height:1.2}
+.switch a[aria-current="page"]{background:var(--accent);color:var(--on-accent)}
+.top .contact{font-weight:600;font-size:.95rem}
+body[data-view="home"] .brand{visibility:hidden}
+.brand{display:flex;align-items:center;line-height:0;text-decoration:none}
+.brand svg{display:block;width:auto}
+.logo-bar{fill:var(--accent);transition:fill .3s}
+.brand:hover svg{transform:translateY(-1px)}
+body[data-view="home"] .top{backdrop-filter:none;-webkit-backdrop-filter:none;position:absolute;left:0;right:0;background:transparent;border-color:transparent;color:#fff}
+body[data-view="home"] .top .switch a[aria-current="page"]{background:#fff;color:#16202A}
+
+/* buttons */
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:2px;background:var(--accent);color:var(--on-accent);font:inherit;font-weight:700;text-decoration:none;border:0;cursor:pointer}
+.btn{transition:transform .2s ease,filter .2s ease,box-shadow .2s ease}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn:active{transform:none}
+.btn.ghost{background:transparent;color:var(--fg);box-shadow:inset 0 0 0 1.5px currentColor}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+
+/* home */
+.hero{position:relative;min-height:100vh;min-height:100svh;color:#fff;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;background:#16202A}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 62%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(16,24,31,.6) 0%,rgba(16,24,31,.3) 40%,rgba(16,24,31,.2) 58%,rgba(16,24,31,.88) 100%)}
+.hero>*{position:relative;z-index:1}
+.hero-title{padding:clamp(6rem,14vh,9rem) max(1.25rem,calc((100% - 1200px)/2)) 0}
+.hero h1{font-size:clamp(4.2rem,17vw,13rem);text-transform:uppercase;line-height:.86}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span i{display:block;font-style:normal;animation:rise .95s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(2) i{animation-delay:.12s}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.hero .sub{display:block;font-size:clamp(1.2rem,2.2vw,1.7rem);margin:1.4rem 0 0;max-width:34ch;line-height:1.3;font-weight:700;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:0 max(1.25rem,calc((100% - 1200px)/2)) clamp(1.5rem,5vh,3rem)}
+.door{display:block;text-decoration:none;padding:1.2rem 1.4rem 1.3rem;background:rgba(16,24,31,.74);backdrop-filter:blur(6px);border-left:5px solid var(--c);transition:background .2s}
+.door:hover{background:rgba(16,24,31,.9)}
+.door b{display:block;font-variation-settings:"wdth" 62;font-weight:800;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1;margin-bottom:.4rem}
+.door span{display:block;font-size:1rem;line-height:1.4;max-width:34ch}
+.door.a{--c:#FF7A3D}.door.c{--c:#6FB1F2}
+
+/* page intro */
+.intro{padding:clamp(2.5rem,6vw,5rem) 0}
+.intro .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.intro h1{font-size:clamp(3.4rem,9vw,7.5rem);margin-bottom:1.5rem}
+.intro h1{margin-bottom:1rem}
+.intro h1.coach-h1{display:flex;align-items:baseline;flex-wrap:nowrap;gap:1rem}
+.h1-note{flex:1;min-width:0;display:block;font-variation-settings:"wdth" 100;font-style:normal;font-weight:400;font-size:clamp(.95rem,1.5vw,1.2rem);line-height:1.3;letter-spacing:0}
+.disciplines{list-style:none;margin:0 0 1.8rem;padding:0}
+.disciplines li{font-variation-settings:"wdth" 62;font-weight:600;font-size:clamp(1.9rem,4.4vw,3.1rem);line-height:1.12}
+.intro figure{margin:0;aspect-ratio:4/5;overflow:hidden;border-radius:2px;background:var(--surface)}
+.intro figure img{width:100%;height:100%;object-fit:cover;object-position:68% 62%}
+
+/* palmares */
+.rows{border-top:1.5px solid var(--fg)}
+.row{display:grid;grid-template-columns:minmax(5.5rem,11rem) 1fr;gap:1.5rem;align-items:center;padding:1.2rem 0;border-bottom:1px solid var(--line)}
+.row .big{font-variation-settings:"wdth" 62;font-weight:900;font-size:clamp(3.6rem,10vw,7rem);line-height:.9;color:var(--accent)}
+.row h3{margin-bottom:.35rem}
+.row p{margin:0;color:var(--muted)}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;border-left:2px solid var(--accent)}
+.tl li{display:grid;grid-template-columns:9.5rem 1fr;gap:1rem;padding:0 0 1.9rem 1.6rem;position:relative}
+.tl li::before{content:"";position:absolute;left:-8px;top:.5rem;width:14px;height:14px;background:var(--accent);transform:rotate(45deg)}
+.tl .yr{font-variation-settings:"wdth" 62;font-weight:800;font-size:1.9rem;line-height:1.1}
+.tl h3{font-size:1.5rem;margin-bottom:.3rem}
+.tl p{margin:0;color:var(--muted)}
+.tl li.now .yr,.tl li.now h3{color:var(--accent)}
+.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(1.5rem,5vw,4.5rem)}
+
+/* 2027 */
+.races{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:1rem;margin-top:2rem}
+.race{padding:1.6rem;background:var(--bg);border-top:4px solid var(--line)}
+.race h3{margin-bottom:.6rem}
+.race p{margin:0;color:var(--muted)}
+.race.main{background:#0A1015;color:var(--on-ink);border-top-color:var(--accent)}
+.race.main p{color:#C4CED5}
+.race.main h3{font-size:clamp(2.4rem,5vw,3.6rem);color:var(--accent)}
+.race.main{--accent:#FF7A3D}
+
+/* ambition */
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:2rem;border-top:1.5px solid var(--fg)}
+.ladder div{padding:1.4rem 1.4rem 0 0}
+.ladder div+div{padding-left:1.4rem;border-left:1px solid var(--line)}
+.ladder h3{margin-bottom:.4rem;color:var(--accent)}
+.ladder p{margin:0}
+.quote{font-variation-settings:"wdth" 62;font-weight:800;font-size:clamp(2.4rem,6vw,4.8rem);line-height:.98;margin:3rem 0 0;max-width:20ch}
+
+/* partenaires */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem)}
+dl{margin:0}
+dt{font-variation-settings:"wdth" 62;font-weight:800;font-size:1.6rem;line-height:1.1;margin-top:1.3rem}
+dd{margin:.25rem 0 0;color:var(--muted)}
+.contact-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+form{display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--bg);border:1.5px solid var(--line);border-radius:0;padding:.75rem .85rem;width:100%}
+input:focus-visible,select:focus-visible,textarea:focus-visible{border-color:var(--accent)}
+textarea{min-height:7rem;resize:vertical}
+.note{font-size:.9rem;color:var(--muted);margin:0}
+.band{position:relative;margin:clamp(3rem,6vw,5rem) 0 0;height:clamp(300px,52vw,620px);overflow:hidden;background:var(--band)}
+.band img{width:100%;height:100%;object-fit:cover;object-position:60% 58%}
+
+.alt-contact{display:flex;flex-direction:column;align-items:flex-start;gap:1.8rem;margin-top:1rem}
+.alt-contact span{font-weight:600}
+.or-form{font-weight:600;margin:0 0 1rem}
+.gform{padding:1.4rem 1.5rem;border:1.5px solid var(--accent);background:color-mix(in srgb,var(--accent) 14%,transparent);margin-bottom:1.8rem}
+.gform{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem}
+.gform p{margin:0;max-width:62ch}
+.gform-band{margin-top:clamp(2.5rem,5vw,4rem)}
+.shots-wrap{margin:1.8rem 0 0}
+.shot{display:block;width:100%;min-width:0;padding:0;margin:0;border:1.5px solid var(--line);background:#fff;cursor:zoom-in}
+.shot img{display:block;width:100%;height:auto}
+.shots-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;align-items:start}
+.shots-row2{display:flex;gap:1.2rem;align-items:flex-start;margin-top:1.2rem}
+.shots-row2 .shot{flex:var(--r) 1 0}
+.shots-wrap figcaption{margin:1rem 0 0;font-weight:600;font-size:1.05rem;color:var(--muted)}
+.only-mobile{display:none}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.offer.in:hover{transform:translateY(-5px);transition:transform .25s ease}
+h2{letter-spacing:-.005em}
+.side-shot{margin-top:2rem}
+dialog#lightbox{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh;overflow:visible}
+dialog#lightbox::backdrop{background:rgba(8,12,16,.82)}
+dialog#lightbox img{display:block;max-width:96vw;max-height:92vh;width:auto;height:auto;background:#fff;cursor:zoom-out}
+@media (max-width:860px){.shots-row2{flex-direction:column}.shots-row2 .shot{flex:none;width:100%}.only-desktop{display:none}}
+@media (max-width:520px){.shots-grid{grid-template-columns:1fr}}
+.ig{flex:none;vertical-align:-.2em;margin-right:.5rem}
+.btn:has(.ig){display:inline-flex;align-items:center}
+.btn .ig{vertical-align:middle}
+
+/* coach */
+.pillars{background:var(--ink);color:var(--on-ink);padding:clamp(1.5rem,3vw,2.4rem);border-radius:0;box-shadow:14px 14px 0 var(--accent)}
+.pillars h3{font-size:1.7rem;color:#6FB1F2}
+.pillars ul{list-style:none;margin:1rem 0 0;padding:0}
+.pillars li{padding:.85rem 0;border-top:1px solid rgba(255,255,255,.18)}
+.pillars li b{display:block;font-variation-settings:"wdth" 62;font-weight:800;font-size:1.45rem;line-height:1.1}
+.pillars li span{color:#C4CED5;font-size:.98rem}
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1rem,2vw,1.6rem);margin-top:2.5rem;align-items:stretch}
+.offer{display:flex;flex-direction:column;padding:clamp(1.5rem,2.4vw,2.2rem);background:var(--bg);border:1.5px solid var(--line);border-top:6px solid var(--line)}
+.offer h3{font-size:clamp(1.9rem,3vw,2.5rem);margin:0 0 .6rem}
+.offer .price{display:flex;align-items:flex-end;min-height:clamp(3.4rem,6vw,5rem);font-variation-settings:"wdth" 62;font-weight:900;font-size:clamp(3.4rem,6vw,5rem);line-height:.9;color:var(--accent);margin-bottom:.4rem}
+.offer .price.text{font-size:clamp(2.6rem,4.8vw,4rem);line-height:.9}
+.offer .desc{margin:0 0 1.4rem;color:var(--muted)}
+.offer ul{list-style:none;margin:auto 0 0;padding:0}
+.offer .pricebox{min-height:calc(clamp(3.4rem,6vw,5rem) + 1.9rem);margin-bottom:.6rem}
+.offer .student{margin:0;font-size:.9rem;line-height:1.3;font-style:italic;font-weight:500;color:var(--muted);max-width:none}
+.offer li{padding:.7rem 0;border-top:1px solid var(--line);font-weight:600}
+.offer:nth-child(2){background:color-mix(in srgb,var(--accent) 22%,var(--bg));border-color:var(--accent);box-shadow:10px 10px 0 var(--accent)}
+.offer:nth-child(3){background:color-mix(in srgb,var(--accent) 38%,var(--bg));border-color:var(--accent);box-shadow:10px 10px 0 var(--accent)}
+.offer:nth-child(3) .price{color:var(--fg)}
+.offer:nth-child(3) .desc{color:rgba(243,245,244,.92)}
+.offer:nth-child(3) li{border-top-color:rgba(255,255,255,.35)}
+.badge{display:inline-block;font-size:.78rem;font-weight:700;padding:.15rem .55rem;border-radius:2px;background:var(--accent);color:var(--on-accent);vertical-align:middle;margin-left:.5rem;font-variation-settings:"wdth" 100}
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem clamp(1.5rem,4vw,3rem);margin-top:2rem;align-items:start}
+.review{margin:0}
+.rhead{margin-bottom:.8rem}
+.rhead strong{display:block;font-variation-settings:"wdth" 62;font-weight:800;font-size:1.3rem;line-height:1.1}
+.rhead span{color:var(--muted);font-size:.9rem}
+.review blockquote{margin:0;padding:1rem 1.2rem;border:1.5px solid var(--line);border-left:5px solid var(--accent);background:var(--surface)}
+.review p{margin:0;font-size:.93rem;line-height:1.55;max-width:none}
+.more-reviews{margin-top:1.6rem}
+.more-reviews summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 0;font-weight:600;font-size:.95rem}
+.more-reviews summary::-webkit-details-marker{display:none}
+.more-reviews summary svg{transition:transform .25s ease}
+.more-reviews[open] summary svg{transform:rotate(180deg)}
+.more-reviews .reviews{margin-top:1.2rem}
+
+footer.site{padding:2.5rem 0;background:var(--band);color:var(--on-ink);font-size:.95rem}
+footer.site .muted{color:#9AA8B2}
+footer.site a{text-decoration:none}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+
+@media (max-width:860px){
+  .intro .wrap,.split,.two,.contact-box{grid-template-columns:1fr}
+  .offers{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .intro figure{aspect-ratio:4/3;order:-1}
+  .races,.ladder{grid-template-columns:1fr}
+  .ladder div+div{padding-left:0;border-left:0;border-top:1px solid var(--line);margin-top:1.4rem;padding-top:1.4rem}
+  .doors{grid-template-columns:1fr}
+  .tl li{grid-template-columns:1fr;gap:.2rem}
+  .top .contact{display:none}
+  .hero>img{object-position:68% 60%}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero h1 span i{animation:none}
+  *{transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body data-view="home">
+
+<header class="top">
+  <a class="brand" href="#/" aria-label="Valentin Maury, accueil"><svg viewBox="0 0 62 44" height="34" role="img" aria-hidden="true"><polygon fill="currentColor" points="2,3 10,3 16,21 22,3 30,3 19.5,33 12.5,33"/><polygon fill="currentColor" points="34,33 34,3 41.5,3 47,16 52.5,3 60,3 60,33 53,33 53,15 47,28 41,15 41,33"/><rect class="logo-bar" x="2" y="37.5" width="58" height="3.6"/></svg></a>
+  <nav class="switch" aria-label="Choisir la section">
+    <a href="#/athlete" data-nav="athlete">Athlète</a>
+    <a href="#/coach" data-nav="coach">Coaching</a>
+  </nav>
+  <a class="contact" id="contactLink" href="#/athlete/contact-athlete">Contact</a>
+</header>
+
+<!-- ACCUEIL -->
+<main id="view-home">
+  <div class="hero">
+    <img data-photo alt="Valentin Maury court en montagne, face à un massif rocheux">
+    <div class="hero-title">
+      <h1 class="cond"><span><i>Valentin</i></span><span><i>Maury</i></span></h1>
+      <p class="sub">Athlète ultra-trail et coach, installé à Annecy.</p>
+    </div>
+    <div class="doors">
+      <a class="door a" href="#/athlete"><b>Athlète et Partenariat</b><span>Mon parcours, mes résultats, mes objectifs 2027 et comment s'associer au projet.</span></a>
+      <a class="door c" href="#/coach"><b>Coaching</b><span>Mes accompagnements en course à pied, trail et préparation physique, et les athlètes que j'ai suivis.</span></a>
+    </div>
+  </div>
+</main>
+
+<!-- ATHLETE -->
+<main id="view-athlete" hidden tabindex="-1">
+  <div class="intro hero-wide">
+    <img class="hero-bg" data-photo alt="Valentin Maury en course sur une crête alpine, face à un massif rocheux">
+    <div class="wrap hero-copy">
+      <h1>Athlète ultra-trail</h1>
+      <p class="lede">Athlète de trail running à Annecy, je m'investis pleinement dans la recherche du haut niveau et de la haute performance. Qualifié aux finales UTMB 2027 en catégorie élite, je cherche des partenaires pour construire ensemble ce projet dans la durée.</p>
+      <div class="actions">
+          <a class="btn" href="#/athlete/partenariat">Devenir partenaire</a>
+          <a class="btn ghost" href="#/athlete/resultats">Voir les résultats</a>
+        </div>
+    </div>
+  </div>
+
+  <section id="resultats" class="alt">
+    <div class="wrap">
+      <h2>Résultats 2026</h2>
+      <div class="rows">
+        <div class="row"><div class="big">3<sup style="font-size:.4em">e</sup></div><div><h3>Grand Raid 73</h3><p>Premier podium sur la course historique.</p></div></div>
+        <div class="row"><div class="big">2<sup style="font-size:.4em">e</sup></div><div><h3>UTCAM 120 km</h3><p>Une deuxième place sur une longue distance.</p></div></div>
+        <div class="row"><div class="big">5<sup style="font-size:.4em">e</sup></div><div><h3>UTMB Nice 100K</h3><p>La performance qui ouvre les portes des finales UTMB 2027.</p></div></div>
+        <div class="row"><div class="big">824</div><div><h3>UTMB Index</h3><p>Qualification aux finales UTMB 2027, en catégorie élite.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parcours">
+    <div class="wrap split">
+      <div>
+        <h2>Parcours</h2>
+        <p class="lede">Les grandes étapes de mon parcours, de la découverte du trail aux finales UTMB 2027.</p>
+      </div>
+      <ol class="tl">
+        <li><span class="yr">2022</span><div><h3>La découverte</h3><p>Je découvre le trail.</p></div></li>
+        <li><span class="yr">2023 à 2024</span><div><h3>Le déclic</h3><p>Le trail prend progressivement une place centrale dans ma vie.</p></div></li>
+        <li><span class="yr">2024</span><div><h3>Le choix d'Annecy</h3><p>Je m'installe à Annecy pour donner une vraie chance à mon projet.</p></div></li>
+        <li><span class="yr">2024 à 2026</span><div><h3>Construire l'athlète</h3><p>Un coach, un entraînement structuré, la récupération, la nutrition et la préparation deviennent des priorités.</p></div></li>
+        <li><span class="yr">2026</span><div><h3>Premiers résultats</h3><p>3e au Grand Raid 73, 2e à l'UTCAM 120 km, 5e à l'UTMB Nice 100K.</p></div></li>
+        <li class="now"><span class="yr">2027</span><div><h3>Les finales UTMB</h3><p>Je me confronte au niveau international, en catégorie élite.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="2027" class="alt">
+    <div class="wrap">
+      <h2>2027, une saison construite autour de l'UTMB</h2>
+      <p class="lede">Je choisis 3 courses dans l'année pour me permettre d'être à 100 % et performant sur chacune d'entre elles. Les deux premières s'inscrivent dans une continuité de préparation spécifique, pour arriver à Chamonix le mieux préparé possible.</p>
+      <div class="races">
+        <div class="race"><h3>Chianti by UTMB</h3><p>Se confronter et construire.</p></div>
+        <div class="race"><h3>Maxi-Race</h3><p>Ajuster et jouer devant.</p></div>
+        <div class="race main"><h3>UTMB</h3><p>L'objectif majeur de la saison. Niveau physique, préparation mentale, stratégie de course, nutrition, matériel éprouvé : tout converge vers le jour J.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ambition">
+    <div class="wrap">
+      <h2>Une ambition construite avec patience</h2>
+      <p class="lede">Atteindre le très haut niveau est mon ambition. Je veux une carrière longue et durable, avec le meilleur équilibre entre performance et santé.</p>
+      <div class="ladder">
+        <div><h3>En 2027</h3><p>Me confronter au niveau international.</p></div>
+        <div><h3>Les 3 prochaines années</h3><p>Jouer régulièrement les podiums.</p></div>
+        <div><h3>À long terme</h3><p>Atteindre le très haut niveau.</p></div>
+      </div>
+      <p class="quote">Je ne cherche pas seulement à aller vite. Je veux aller loin.</p>
+    </div>
+  </section>
+
+  <figure class="band"><img data-photo="forest" alt="Valentin Maury en course dans une forêt brumeuse, dossard 2060" loading="lazy"></figure>
+
+  <section id="partenariat" class="alt">
+    <div class="wrap">
+      <h2>Devenir partenaire</h2>
+      <p class="lede">Je cherche des partenaires de performance : des collaborations fortes et sincères, cohérentes avec mon projet. Commencer tôt, construire ensemble, grandir ensemble.</p>
+      <div class="two" style="margin-top:2rem">
+        <div>
+          <h3>Ce que je recherche</h3>
+          <dl>
+            <dt>Équipement</dt><dd>Chaussures, textile, sac, bâtons, montre, lunettes, éclairage.</dd>
+            <dt>Nutrition et hydratation</dt><dd>Nutrition quotidienne, produits d'effort, hydratation et récupération.</dd>
+            <dt>Récupération et performance</dt><dd>Mobilité, préparation physique, sommeil, soins et technologies.</dd>
+            <dt>Préparation et expertise</dt><dd>Des professionnels qui m'aident à mieux comprendre mon corps et à prendre de meilleures décisions.</dd>
+            <dt>Partenaires majeurs</dt><dd>Des entreprises qui veulent s'associer durablement à la construction du projet.</dd>
+          </dl>
+        </div>
+        <div>
+          <h3>Ce que je propose</h3>
+          <dl>
+            <dt>Une utilisation réelle</dt><dd>À l'entraînement, en stage, en compétition, en récupération et en préparation.</dd>
+            <dt>Du contenu authentique</dt><dd>Entraînements, préparations, courses, réussites, difficultés et coulisses.</dd>
+            <dt>Une visibilité liée à la performance</dt><dd>Photos, vidéos, publications, stories, résultats et comptes rendus.</dd>
+            <dt>Des retours terrain</dt><dd>Des retours sur vos produits et sur les besoins spécifiques de l'ultra-trail.</dd>
+            <dt>Une histoire à construire</dt><dd>Être là au début d'une progression et accompagner son évolution.</dd>
+                      </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact-athlete">
+    <div class="wrap contact-box">
+      <div>
+        <h2>Se rencontrer</h2>
+        <p class="lede">Une première étape : échanger pour comprendre vos attentes, vos besoins et votre vision du partenariat. Ensuite, nous définirons ensemble équipement, objectifs, actions de communication et, si cela fait sens, accompagnement financier.</p>
+        <h3 style="margin-top:2rem">Me contacter</h3>
+        <p class="alt-contact"><a class="btn ghost" href="https://www.instagram.com/ultraa_vava" target="_blank" rel="noopener" aria-label="Instagram @ultraa_vava"><svg class="ig" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></svg><span class="ig-name">@ultraa_vava</span></a></p>
+      </div>
+      <div>
+        <p class="or-form">ou via ce formulaire</p>
+        <form id="formPartner" aria-label="Contact partenaires">
+          <label>Votre nom et votre marque<input name="who" required autocomplete="organization"></label>
+          <label>Votre e-mail<input type="email" name="mail" required autocomplete="email"></label>
+          <label>Votre message<textarea name="msg" required></textarea></label>
+          <button class="btn" type="submit">Envoyer par e-mail</button>
+          <p class="note">Le bouton ouvre votre application de messagerie avec le message prérempli.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- COACH -->
+<main id="view-coach" hidden tabindex="-1">
+  <div class="intro">
+    <div class="wrap">
+      <div>
+        <h1 class="coach-h1">Coach <span class="h1-note">titulaire d'un diplôme certifié par l'État</span></h1>
+        <ul class="disciplines" aria-label="Disciplines accompagnées">
+          <li>Course à pied</li>
+          <li>Trail</li>
+          <li>Préparation physique</li>
+        </ul>
+        <p class="lede">J'accompagne les coureurs, des premiers kilomètres sur route aux longues distances en montagne, avec une préparation physique intégrée à chaque plan. Chaque accompagnement est personnalisé : j'adapte ma méthode à chacun en mêlant mon expérience, le retour d'expérience de mes athlètes et les dernières études scientifiques, autour de l'entraînement, de la récupération, de la nutrition et de l'analyse des courses.</p>
+        <div class="actions">
+          <a class="btn" href="#/coach/contact-coach">Démarrer un accompagnement</a>
+          <a class="btn ghost" href="#/coach/athletes">Lire les retours</a>
+        </div>
+      </div>
+      <div class="pillars">
+        <h3>Ma méthode</h3>
+        <ul>
+          <li><b>Entraînement structuré</b><span>Qualité et régularité, semaine après semaine.</span></li>
+          <li><b>Préparation physique</b><span>Un corps solide pour tenir dans la durée.</span></li>
+          <li><b>Récupération et nutrition</b><span>Des leviers de performance à part entière.</span></li>
+          <li><b>Analyse et ajustement</b><span>Chaque donnée et chaque course servent à progresser.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <section id="offres" class="alt">
+    <div class="wrap">
+      <h2>Mes suivis</h2>
+      <p class="lede">Trois formules, chacune incluant la précédente.</p>
+      <div class="offers" id="offers"></div>
+    </div>
+  </section>
+
+  <section id="athletes">
+    <div class="wrap">
+      <h2>Les retours de mes athlètes</h2>
+      <p class="lede">Ce que disent ceux que j'accompagne, avec leurs mots.</p>
+      <div id="reviews"></div>
+    </div>
+  </section>
+
+  <section id="contact-coach" class="alt">
+    <div class="wrap">
+      <div class="contact-box">
+        <div>
+          <h2>Parlons de votre objectif</h2>
+          <div class="side-shot only-desktop"><button type="button" class="shot" aria-label="Agrandir : Liste d'objectifs de course avec compte à rebours : Réunion, Les Templiers et Sainté Lyon"><img data-photo="objectifs" alt="Liste d'objectifs de course avec compte à rebours : Réunion, Les Templiers et Sainté Lyon" loading="lazy"></button></div>
+        </div>
+        <div>
+          <p class="lede" style="margin-bottom:1.2rem">Dites-moi où vous en êtes et vos objectifs.</p>
+          <form id="formCoach" aria-label="Message à Valentin">
+            <label>Votre nom<input name="name" required autocomplete="name"></label>
+            <label>Votre e-mail<input type="email" name="mail" required autocomplete="email"></label>
+            <label>Votre message<textarea name="msg" required></textarea></label>
+            <button class="btn" type="submit">Envoyer par e-mail</button>
+            <p class="note">Le bouton ouvre votre application de messagerie avec le message prérempli.</p>
+          </form>
+        </div>
+      </div>
+      <div class="gform-band">
+        <div class="gform">
+          <p><strong>Avant de commencer</strong>, remplissez mon formulaire de présentation pour accompagner votre mail : il me permet d'avoir un maximum d'informations sur vous, votre niveau et votre objectif de course.</p>
+          <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfXuB1Evbv-RfBiKBH7bFOTB9T5jkZKwkFCmjVhCQ4IFrOW0g/viewform?usp=header" target="_blank" rel="noopener">Remplir le formulaire</a>
+        </div>
+        <figure class="shots-wrap">
+          <div class="shots-grid">
+            <button type="button" class="shot" aria-label="Agrandir : Calendrier d'entraînement sur cinq semaines, avec séances de course à pied, préparation physique, vélo et repos"><img data-photo="planning" alt="Calendrier d'entraînement sur cinq semaines, avec séances de course à pied, préparation physique, vélo et repos" loading="lazy"></button>
+            <button type="button" class="shot" aria-label="Agrandir : Graphiques de la durée d'entraînement par sport, en répartition et par semaine"><img data-photo="charge" alt="Graphiques de la durée d'entraînement par sport, en répartition et par semaine" loading="lazy"></button>
+          </div>
+          <div class="shots-row2">
+            <button type="button" class="shot" style="--r:2.518" aria-label="Agrandir : Courbe de charge d'entraînement Foster avec charge, contrainte, fitness et ACWR"><img data-photo="foster" alt="Courbe de charge d'entraînement Foster avec charge, contrainte, fitness et ACWR" loading="lazy"></button>
+            <button type="button" class="shot" style="--r:1.944" aria-label="Agrandir : Constructeur de séance avec cibles d'effort (RPE) et blocs d'échauffement, de corps de séance et de récupération"><img data-photo="builder" alt="Constructeur de séance avec cibles d'effort (RPE) et blocs d'échauffement, de corps de séance et de récupération" loading="lazy"></button>
+          </div>
+          <figcaption>Aperçu de l'interface de l'application Nolio</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<svg class="ridge" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" opacity=".26" d="M0 170 L0 91.8 L50 68.0 L95 78.2 L150 40.8 L190 17.0 L215 51.0 L250 37.4 L300 64.6 L340 47.6 L390 34.0 L430 5.1 L455 37.4 L480 30.6 L520 57.8 L600 51.0 L650 23.8 L690 13.6 L730 37.4 L770 34.0 L860 61.2 L940 51.0 L1010 17.0 L1060 10.2 L1130 20.4 L1160 64.6 L1230 57.8 L1300 34.0 L1350 40.8 L1440 71.4 L1440 170Z"/><path fill="currentColor" opacity=".16" d="M190 17.0 L215 51.0 L250 37.4 L300 64.6 L235 91.8Z"/><path fill="currentColor" opacity=".16" d="M150 40.8 L190 17.0 L175 81.6 L140 85.0Z"/><path fill="currentColor" opacity=".16" d="M430 5.1 L455 37.4 L480 30.6 L520 57.8 L470 85.0Z"/><path fill="currentColor" opacity=".16" d="M690 13.6 L730 37.4 L770 34.0 L860 61.2 L760 81.6Z"/><path fill="currentColor" opacity=".16" d="M1060 10.2 L1130 20.4 L1160 64.6 L1100 85.0Z"/><path fill="currentColor" opacity=".16" d="M340 47.6 L390 34.0 L430 5.1 L390 76.5Z"/><path fill="currentColor" opacity=".55" d="M0 170 L0 119.0 L70 91.8 L130 105.4 L200 71.4 L250 102.0 L300 85.0 L360 85.0 L420 74.8 L470 95.2 L540 102.0 L610 81.6 L700 68.0 L780 91.8 L850 85.0 L930 61.2 L1000 71.4 L1080 102.0 L1160 91.8 L1240 64.6 L1320 78.2 L1400 102.0 L1440 108.8 L1440 170Z"/><path fill="currentColor" d="M0 170 L0 142.8 L100 129.2 L180 147.9 L270 132.6 L380 136.0 L470 149.6 L560 142.8 L700 156.4 L820 139.4 L960 149.6 L1100 132.6 L1200 146.2 L1320 136.0 L1440 153.0 L1440 170Z"/></svg>
+<dialog id="lightbox" aria-label="Image agrandie"><img alt=""></dialog>
+
+<footer class="site">
+  <div class="wrap">
+    <a href="https://www.instagram.com/ultraa_vava" target="_blank" rel="noopener" aria-label="Instagram @ultraa_vava"><svg class="ig" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></svg><span class="ig-name">@ultraa_vava</span></a>
+    <span class="muted"><span id="yr"></span> Valentin Maury</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   CONTENU À MODIFIER
+   - email : l'adresse qui reçoit les messages des formulaires
+   - OFFERS / REVIEWS : tes accompagnements et les avis de tes athlètes.
+     Retire "example: true" pour supprimer le badge « Exemple ».
+   ============================================================ */
+const CONFIG = { email: "valentin.maury@orange.fr" };
+
+const OFFERS = [
+  { name: "Suivi standard", for: "Pour les coureurs qui veulent un accompagnement standard, avec un cadre clair et personnalisé pour progresser vers leur objectif.",
+    items: ["Planification personnalisée", "Planification et retour hebdomadaires", "Construction de la saison", "Échanges et appels illimités", "Accès application Nolio"],
+    price: "89 €", note: "Tarif étudiant : 59 €", example: false },
+  { name: "Suivi intense", for: "Pour les coureurs souhaitant un accompagnement complet.",
+    items: ["Suivi standard", "Préparation physique générale et spécifique", "Plan nutrition standard", "Stratégie de course"],
+    price: "99 €", note: "Tarif étudiant : 65 €", example: false },
+  { name: "Suivi sur mesure", for: "Pour un accompagnement 5 étoiles.",
+    items: ["Suivi intense", "Accompagnement en présentiel", "Assistance en course"],
+    price: "Sur devis", example: false }
+];
+
+const REVIEWS = [
+  { who: "Manon", suivi: "Suivi standard", prep: "Premier trail de 16 km",
+    text: "Valentin m’a proposé une prépa sur plusieurs mois pour un objectif trail. Les séances ont été progressives, adaptées au planning et ré-adaptées selon les imprévus. Les choix et le suivi permettent de lâcher complètement prise et de se laisser porter au fil des séances tout en prenant du plaisir à repousser nos limites. Je me suis sentie vraiment prête pour la distance et le dénivelé qui m’attendaient, ce qui permet de se libérer de beaucoup de barrières mentales." },
+  { who: "Jade", suivi: "Suivi intense", prep: "Préparation générale, objectif 10 km et semi-marathon",
+    text: "Un accompagnement au top ! Le support est intuitif, le programme personnalisé et modulable selon mes besoins. Le coach est toujours à l’écoute et ses retours constructifs après chaque séance me permettent de progresser efficacement. Étant novice, je me sens beaucoup moins perdue et je sais désormais sur quoi travailler pour avancer sereinement !" }
+];
+/* ============================================================ */
+
+const PHOTOS = {
+  hero: "images/hero.jpg",
+  forest: "images/forest.jpg",
+  planning: "images/planning.webp",
+  charge: "images/charge.webp",
+  foster: "images/foster.webp",
+  builder: "images/builder.webp",
+  objectifs: "images/objectifs.webp"
+};
+document.querySelectorAll("[data-photo]").forEach(i => i.src = PHOTOS[i.dataset.photo || "hero"]);
+document.getElementById("yr").textContent = "© " + new Date().getFullYear();
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const badge = ex => ex ? '<span class="badge">Exemple</span>' : "";
+
+document.getElementById("offers").innerHTML = OFFERS.map(o => `
+  <article class="offer">
+    <h3>${esc(o.name)}${badge(o.example)}</h3>
+    <div class="pricebox">
+      <div class="price${/\d/.test(o.price) ? "" : " text"}">${esc(o.price)}</div>
+      ${o.note ? `<p class="student">${esc(o.note)}</p>` : ""}
+    </div>
+    <p class="desc">${esc(o.for)}</p>
+    <ul>${o.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul>
+  </article>`).join("");
+
+const reviewHTML = r => `
+  <figure class="review">
+    <figcaption class="rhead"><strong>${esc(r.who)}</strong><span>${[r.suivi, r.prep].filter(Boolean).map(esc).join(" · ")}</span></figcaption>
+    <blockquote><p>${esc(r.text)}</p></blockquote>
+  </figure>`;
+const VISIBLE_REVIEWS = 3;
+document.getElementById("reviews").innerHTML =
+  `<div class="reviews">${REVIEWS.slice(0, VISIBLE_REVIEWS).map(reviewHTML).join("")}</div>` +
+  (REVIEWS.length > VISIBLE_REVIEWS
+    ? `<details class="more-reviews"><summary>Voir les autres retours <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="reviews">${REVIEWS.slice(VISIBLE_REVIEWS).map(reviewHTML).join("")}</div></details>`
+    : "");
+
+function mailto(subject, body){
+  location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+}
+document.getElementById("formPartner").addEventListener("submit", e => {
+  e.preventDefault(); const f = new FormData(e.target);
+  mailto("Partenariat : " + f.get("who"), f.get("msg") + "\n\n" + f.get("who") + "\n" + f.get("mail"));
+});
+document.getElementById("formCoach").addEventListener("submit", e => {
+  e.preventDefault(); const f = new FormData(e.target);
+  mailto("Message de " + f.get("name"),
+    f.get("msg") + "\n\n" + f.get("name") + "\n" + f.get("mail"));
+});
+
+const lb = document.getElementById("lightbox"), lbImg = lb.querySelector("img");
+document.querySelectorAll(".shot").forEach(b => b.addEventListener("click", () => {
+  const im = b.querySelector("img"); lbImg.src = im.src; lbImg.alt = im.alt; lb.showModal();
+}));
+lb.addEventListener("click", () => lb.close());
+
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll("section .wrap > h2, section .wrap > .lede, .rows .row, .tl li, .race, .ladder > div, .two > div, .offer, .review, .gform, .shots-wrap, .contact-box > div").forEach(el => { el.classList.add("reveal"); io.observe(el); });
+}
+
+/* routeur : #/  #/athlete  #/coach  puis #/athlete/ancre */
+const views = ["home","athlete","coach"];
+let current = null;
+function route(){
+  const [, v = "", anchor = ""] = location.hash.replace(/^#/, "").split("/");
+  const view = views.includes(v) ? v : "home";
+  const changed = view !== current;
+  current = view;
+  views.forEach(n => document.getElementById("view-" + n).hidden = n !== view);
+  document.body.dataset.view = view;
+  document.querySelectorAll("[data-nav]").forEach(a => a.toggleAttribute("aria-current", a.dataset.nav === view) || a.removeAttribute("aria-current"));
+  document.querySelectorAll("[data-nav]").forEach(a => { if(a.dataset.nav === view) a.setAttribute("aria-current","page"); });
+  document.getElementById("contactLink").href = view === "coach" ? "#/coach/contact-coach" : "#/athlete/contact-athlete";
+  const titles = { home:"Valentin Maury | Athlète ultra-trail et coach", athlete:"Athlète ultra-trail | Valentin Maury", coach:"Coaching course à pied, trail et préparation physique | Valentin Maury" };
+  document.title = titles[view];
+  const target = anchor && document.getElementById(anchor);
+  if(target) target.scrollIntoView(); else if(changed) window.scrollTo(0,0);
+}
+window.addEventListener("hashchange", route);
+route();
+</script>
+</body>
+</html>
