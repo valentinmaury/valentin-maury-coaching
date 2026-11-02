@@ -7,6 +7,7 @@
 <meta name="description" content="Valentin Maury Coaching à Annecy : coaching course à pied, trail et ultra-trail, préparation physique et suivi personnalisé. Athlète ultra-trail qualifié aux finales UTMB 2027.">
 <meta name="author" content="Valentin Maury">
 <meta name="robots" content="index, follow">
+<meta name="theme-color" content="#16202A">
 <link rel="canonical" href="https://valentinmaury.github.io/valentin-maury-coaching/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -27,6 +28,10 @@
       "jobTitle": "Coach course à pied, trail et ultra-trail",
       "url": "https://valentinmaury.github.io/valentin-maury-coaching/",
       "sameAs": ["https://www.instagram.com/ultraa_vava"],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "CQP coach"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Annecy",
@@ -263,6 +268,14 @@ dialog#lightbox img{display:block;max-width:96vw;max-height:92vh;width:auto;heig
 .btn .ig{vertical-align:middle}
 
 /* coach */
+
+.coach-credential{display:inline-flex;align-items:center;gap:.75rem;margin:1.25rem 0 0;padding:.65rem .8rem;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);font-size:.9rem;color:#F3F5F4}
+.coach-credential img{width:92px;height:auto;background:#fff;border-radius:2px}
+.coach-credential span{line-height:1.25}
+.section-cta{margin-top:2.25rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.noscript-seo{padding:3rem 0;background:var(--surface)}
+@media (max-width:860px){.coach-credential{align-items:flex-start}.coach-credential img{width:82px}}
+
 .pillars{background:var(--ink);color:var(--on-ink);padding:clamp(1.5rem,3vw,2.4rem);border-radius:0;box-shadow:14px 14px 0 var(--accent)}
 .pillars h3{font-size:1.7rem;color:#6FB1F2}
 .pillars ul{list-style:none;margin:1rem 0 0;padding:0}
@@ -302,7 +315,10 @@ dialog#lightbox img{display:block;max-width:96vw;max-height:92vh;width:auto;heig
 footer.site{padding:2.5rem 0;background:var(--band);color:var(--on-ink);font-size:.95rem}
 footer.site .muted{color:#9AA8B2}
 footer.site a{text-decoration:none}
-footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:center;align-items:center;text-align:center}
+footer.site .cqp-cert{display:flex;justify-content:center;width:100%;margin:0 0 1.4rem}
+footer.site .cqp-cert img{display:block;width:min(210px,62vw);height:auto;background:#fff;border-radius:2px}
+footer.site .cqp-caption{width:100%;margin-top:-.45rem;font-size:.78rem;color:#9AA8B2}
 
 @media (max-width:860px){
   .intro .wrap,.split,.two,.contact-box{grid-template-columns:1fr}
@@ -340,7 +356,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:spac
     <img data-photo alt="Valentin Maury court en montagne, face à un massif rocheux">
     <div class="hero-title">
       <h1 class="cond"><span><i>Valentin</i></span><span><i>Maury</i></span></h1>
-      <p class="sub">Athlète ultra-trail et coach à Annecy — course à pied, trail et préparation physique.</p>
+      <p class="sub">Athlète ultra-trail & coach à Annecy — course à pied, trail et préparation physique.</p>
     </div>
     <div class="doors">
       <a class="door a" href="#/athlete"><b>Athlète et Partenariat</b><span>Mon parcours, mes résultats, mes objectifs 2027 et comment s'associer au projet.</span></a>
@@ -475,7 +491,11 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:spac
   <div class="intro">
     <div class="wrap">
       <div>
-        <h1 class="coach-h1">Coach course à pied, trail et ultra-trail à Annecy <span class="h1-note">titulaire d'un diplôme certifié par l'État</span></h1>
+        <h1 class="coach-h1">Coach course à pied, trail et ultra-trail à Annecy</h1>
+        <div class="coach-credential" aria-label="Certification CQP">
+          <img src="images/cqp-certification.png" alt="CQP — Certification de Qualification Professionnelle">
+          <span><strong>Titulaire d'un CQP</strong><br>Certification de Qualification Professionnelle</span>
+        </div>
         <ul class="disciplines" aria-label="Disciplines accompagnées">
           <li>Course à pied</li>
           <li>Trail</li>
@@ -504,6 +524,9 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:spac
       <h2>Mes suivis</h2>
       <p class="lede">Trois formules, chacune incluant la précédente.</p>
       <div class="offers" id="offers"></div>
+      <div class="section-cta">
+        <a class="btn" href="#/coach/contact-coach">Parler de mon objectif</a>
+      </div>
     </div>
   </section>
 
@@ -512,6 +535,9 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:spac
       <h2>Les retours de mes athlètes</h2>
       <p class="lede">Ce que disent ceux que j'accompagne, avec leurs mots.</p>
       <div id="reviews"></div>
+      <div class="section-cta">
+        <a class="btn" href="#/coach/contact-coach">Démarrer un accompagnement</a>
+      </div>
     </div>
   </section>
 
@@ -554,11 +580,25 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:spac
   </section>
 </main>
 
+<noscript>
+  <section class="noscript-seo">
+    <div class="wrap">
+      <h2>Valentin Maury Coaching à Annecy</h2>
+      <p>Coaching course à pied, trail et ultra-trail, préparation physique et suivi personnalisé. Valentin Maury est également athlète ultra-trail, qualifié aux finales UTMB 2027 en catégorie élite.</p>
+      <p><a href="mailto:valentin.maury@orange.fr">Contacter Valentin Maury</a></p>
+    </div>
+  </section>
+</noscript>
+
 <svg class="ridge" viewBox="0 0 1440 170" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" opacity=".26" d="M0 170 L0 91.8 L50 68.0 L95 78.2 L150 40.8 L190 17.0 L215 51.0 L250 37.4 L300 64.6 L340 47.6 L390 34.0 L430 5.1 L455 37.4 L480 30.6 L520 57.8 L600 51.0 L650 23.8 L690 13.6 L730 37.4 L770 34.0 L860 61.2 L940 51.0 L1010 17.0 L1060 10.2 L1130 20.4 L1160 64.6 L1230 57.8 L1300 34.0 L1350 40.8 L1440 71.4 L1440 170Z"/><path fill="currentColor" opacity=".16" d="M190 17.0 L215 51.0 L250 37.4 L300 64.6 L235 91.8Z"/><path fill="currentColor" opacity=".16" d="M150 40.8 L190 17.0 L175 81.6 L140 85.0Z"/><path fill="currentColor" opacity=".16" d="M430 5.1 L455 37.4 L480 30.6 L520 57.8 L470 85.0Z"/><path fill="currentColor" opacity=".16" d="M690 13.6 L730 37.4 L770 34.0 L860 61.2 L760 81.6Z"/><path fill="currentColor" opacity=".16" d="M1060 10.2 L1130 20.4 L1160 64.6 L1100 85.0Z"/><path fill="currentColor" opacity=".16" d="M340 47.6 L390 34.0 L430 5.1 L390 76.5Z"/><path fill="currentColor" opacity=".55" d="M0 170 L0 119.0 L70 91.8 L130 105.4 L200 71.4 L250 102.0 L300 85.0 L360 85.0 L420 74.8 L470 95.2 L540 102.0 L610 81.6 L700 68.0 L780 91.8 L850 85.0 L930 61.2 L1000 71.4 L1080 102.0 L1160 91.8 L1240 64.6 L1320 78.2 L1400 102.0 L1440 108.8 L1440 170Z"/><path fill="currentColor" d="M0 170 L0 142.8 L100 129.2 L180 147.9 L270 132.6 L380 136.0 L470 149.6 L560 142.8 L700 156.4 L820 139.4 L960 149.6 L1100 132.6 L1200 146.2 L1320 136.0 L1440 153.0 L1440 170Z"/></svg>
 <dialog id="lightbox" aria-label="Image agrandie"><img alt=""></dialog>
 
 <footer class="site">
   <div class="wrap">
+    <div class="cqp-cert">
+      <img src="images/cqp-certification.png" alt="Certification Qualification Professionnelle (CQP)" loading="lazy">
+    </div>
+    <div class="cqp-caption">CQP · Certification de Qualification Professionnelle</div>
     <a href="https://www.instagram.com/ultraa_vava" target="_blank" rel="noopener" aria-label="Instagram @ultraa_vava"><svg class="ig" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".6" fill="currentColor"/></svg><span class="ig-name">@ultraa_vava</span></a>
     <span class="muted"><span id="yr"></span> Valentin Maury</span>
   </div>
@@ -589,7 +629,9 @@ const REVIEWS = [
   { who: "Manon", suivi: "Suivi standard", prep: "Premier trail de 16 km",
     text: "Valentin m’a proposé une prépa sur plusieurs mois pour un objectif trail. Les séances ont été progressives, adaptées au planning et ré-adaptées selon les imprévus. Les choix et le suivi permettent de lâcher complètement prise et de se laisser porter au fil des séances tout en prenant du plaisir à repousser nos limites. Je me suis sentie vraiment prête pour la distance et le dénivelé qui m’attendaient, ce qui permet de se libérer de beaucoup de barrières mentales." },
   { who: "Jade", suivi: "Suivi intense", prep: "Préparation générale, objectif 10 km et semi-marathon",
-    text: "Un accompagnement au top ! Le support est intuitif, le programme personnalisé et modulable selon mes besoins. Le coach est toujours à l’écoute et ses retours constructifs après chaque séance me permettent de progresser efficacement. Étant novice, je me sens beaucoup moins perdue et je sais désormais sur quoi travailler pour avancer sereinement !" }
+    text: "Un accompagnement au top ! Le support est intuitif, le programme personnalisé et modulable selon mes besoins. Le coach est toujours à l’écoute et ses retours constructifs après chaque séance me permettent de progresser efficacement. Étant novice, je me sens beaucoup moins perdue et je sais désormais sur quoi travailler pour avancer sereinement !" },
+  { who: "Bertrand", suivi: "Prépa route et Trail", prep: "50 km",
+    text: "Valentin est à l’écoute tout au long du cycle, il adapte, affine les séances en fonction du ressenti du coureur. On se sent bien encadré et en confiance. Je recommande !" }
 ];
 /* ============================================================ */
 
@@ -668,7 +710,7 @@ function route(){
   document.querySelectorAll("[data-nav]").forEach(a => a.toggleAttribute("aria-current", a.dataset.nav === view) || a.removeAttribute("aria-current"));
   document.querySelectorAll("[data-nav]").forEach(a => { if(a.dataset.nav === view) a.setAttribute("aria-current","page"); });
   document.getElementById("contactLink").href = view === "coach" ? "#/coach/contact-coach" : "#/athlete/contact-athlete";
-  const titles = { home:"Valentin Maury | Athlète ultra-trail et coach", athlete:"Athlète ultra-trail | Valentin Maury", coach:"Coaching course à pied, trail et préparation physique | Valentin Maury" };
+  const titles = { home:"Valentin Maury Coaching | Coach trail et course à pied à Annecy", athlete:"Valentin Maury | Athlète ultra-trail à Annecy", coach:"Valentin Maury Coaching | Coach trail et course à pied à Annecy" };
   document.title = titles[view];
   const target = anchor && document.getElementById(anchor);
   if(target) target.scrollIntoView(); else if(changed) window.scrollTo(0,0);
